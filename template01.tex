@@ -1,0 +1,108 @@
+\documentclass[11pt,a4paper, twocolumn]{article}
+%\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{blindtext} % for dummy text
+\usepackage{lipsum} % for dummy text
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
+\usepackage{lastpage}
+
+%--------------------------------
+% Font
+%--------------------------------
+%\usepackage{fontspec}
+%\renewcommand{\familydefault}{\sfdefault}
+%\setmainfont{Arial} % sets the roman font
+%\setsansfont{<name of font>} % sets the sans font
+%\setmonofont{} % sets the monospace font
+
+% another font approch
+%\usepackage[T1]{fontenc}
+%\usepackage[scaled]{helvet}
+%\renewcommand*\familydefault{\sfdefault}
+
+%--------------------------------
+%Title Part%
+%--------------------------------
+\def\version{v1.0} % document version
+\usepackage{titling}
+\setlength{\droptitle}{-1cm}
+\makeatletter
+\renewcommand{\maketitle}{\bgroup\setlength{\parindent}{2pt}
+\begin{flushleft}
+  \textbf{\LARGE \@title} \\
+  \@author \\
+  \@date \\
+  \version
+\end{flushleft}\egroup
+}
+\makeatother
+
+% document title
+\title{IT Security Policy and Procedure}
+\author{Unit IT Security}
+\date{\today}
+
+%--------------------------------
+% Header and Footer
+%--------------------------------
+\fancyhead{}
+\fancyhead[L]{\textit{\thetitle}}
+\fancyfoot{}
+\fancyfoot[L]{\small{\version \ Internal Use Only}}
+\fancyfoot[R]{\small {Page \thepage \ of \pageref{LastPage}}}
+\renewcommand{\footrulewidth}{0.4pt}
+\rhead{\nouppercase{\textit{\rightmark}}}
+
+%--------------------------------
+% Begin Document
+%--------------------------------
+\begin{document}
+\maketitle
+\noindent \hrulefill % horizontel line after title
+\thispagestyle{empty} % no header and footer on 1st page
+%\tableofcontents
+
+%---heading
+\section{Introduction}
+Suspendisse vel felis. Ut lorem lorem, \texttt{interdum} eu, tincidunt sit amet, laoreet vitae, arcu. Aenean faucibus pede eu ante. Praesent enim elit, rutrum at, molestie non, nonummy vel, nisl. Ut lectus eros,malesuada sit amet, fermentum eu, sodales cursus, magna \footnote{http://www.nourl.com.my}. Donec eu purus \cite{book1}.
+
+%---sub heading
+\subsection{Scope}
+Suspendisse vel felis. \emph{Ut lorem lorem}, interdum eu, tincidunt sit amet, laoreet vitae, arcu. Aenean faucibus pede eu ante. Praesent enim elit, rutrum at, molestie non, nonummy vel, nisl. Ut lectus eros,malesuada sit amet, fermentum eu, \textit{sodales cursus, magna. Donec eu purus}
+
+\begin{verbatim}
+for x in thelist:
+    print type(x)
+
+def write_file(item1):
+    pass
+\end{verbatim}
+
+
+%---heading
+\section{Conclusion}
+Suspendisse vel felis. Ut lorem lorem, interdum eu, tincidunt sit amet, laoreet vitae, arcu. Aenean faucibus pede eu ante. Praesent enim elit, rutrum at, molestie non, nonummy vel, nisl. Ut lectus eros,malesuada sit amet, fermentum eu, sodales cursus, magna. Donec eu purus
+
+\newpage
+
+%--------------------------------
+% References
+%--------------------------------
+\addcontentsline{toc}{section}{References}
+\bibliography{mybib}
+\bibliographystyle{plain} 
+
+%--------------------------------
+% Appendices
+%--------------------------------
+\appendix
+\addcontentsline{toc}{section}{Appendices}
+\section{Appendices}
+\subsection{Forms}
+Suspendisse vel felis. Ut lorem lorem, interdum eu, tincidunt sit amet, laoreet vitae, arcu. Aenean faucibus pede eu ante. Praesent enim elit, rutrum at, molestie non, nonummy vel, nisl. Ut lectus eros,malesuada sit amet, fermentum eu, sodales cursus, magna. Donec eu purus.
+
+\end{document}
