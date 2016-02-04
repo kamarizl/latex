@@ -1,0 +1,79 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{lmodern}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{microtype}
+\usepackage[utf8]{inputenc}
+\usepackage{courier}
+\usepackage{sectsty}
+\usepackage{lastpage}
+\usepackage{graphicx}
+% \graphicspath{ {images/} }
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{blindtext}
+\renewcommand{\rmdefault}{phv}
+\renewcommand{\sfdefault}{phv}
+\usepackage{url}
+\allsectionsfont{\usefont{OT1}{phv}{bc}{n}\selectfont}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks,
+  citecolor=black,
+  filecolor=black,
+  linkcolor=black,
+  urlcolor=blue
+}
+\usepackage{xcolor}
+\usepackage{listings}
+\lstset{
+  basicstyle=\footnotesize\ttfamily,
+  breaklines=true,
+  backgroundcolor=\color{gray!8},
+  keepspaces=true,                                  
+  showspaces=false,                
+  showstringspaces=false,
+  showtabs=false,                  
+  tabsize=2,
+}
+\usepackage{titling}
+\title{The Internet of Things}
+\author{Kamarizal Azri}
+\date{\today}
+\def\version{1.0}
+\fancypagestyle{mainpage}{
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{0pt}
+  \fancyfoot{}
+  \fancyfoot[L]{\footnotesize{Internal Use Only}}
+  \fancyfoot[R]{\footnotesize {Page \thepage \ of \pageref{LastPage}}}
+  \renewcommand{\footrulewidth}{0.4pt}
+}
+\fancyhead{}
+\fancyhead[L]{\footnotesize{\textit{\thetitle}}}
+\fancyhead[R]{\footnotesize{\textit{\rightmark}}}
+\fancyfoot{}
+\fancyfoot[L]{\footnotesize{Internal Use Only}}
+\fancyfoot[R]{\footnotesize {Page \thepage \ of \pageref{LastPage}}}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\sectionmark}[1]{\markright{\thesection \ #1}}
+
+\begin{document}
+{\raggedright \sffamily
+    \LARGE \textbf{\thetitle} \\ [1mm]
+    \normalsize \ \theauthor \\
+    \normalsize \ \thedate \\
+    \normalsize \ v-\version \\
+}
+% \tableofcontents
+\thispagestyle{mainpage}
+
+
+% \addcontentsline{toc}{section}{References}
+% \bibliography{mybib}
+% \bibliographystyle{plain} 
+% \appendix
+% \addcontentsline{toc}{section}{Appendices}
+% \section{Appendices}
+% \subsection{Forms}
+
+\end{document}
