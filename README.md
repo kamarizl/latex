@@ -20,11 +20,20 @@ Or, define in premable
 ```
 Simple and clean title page
 ```
-{\raggedright
-	\LARGE \textbf{The Page Documentation}  \\
-	\normalsize  by John Due \\
-	\today \\
+\usepackage{titling}
+\title{Another Title}
+\author{John Dan}
+\date{\today}
+
+\begin{document}
+{\raggedright \sffamily
+    \LARGE \textbf{\thetitle} \\ [2mm]
+    \normalsize \ \theauthor \\
+    \normalsize \ \thedate \\
+    \normalsize \ v-1.0 \\ % version
 }
+...snip...
+
 ```
 Simple way to print code
 ```
@@ -35,10 +44,18 @@ Simple way to print code
 	breaklines=true,
 	backgroundcolor=\color{gray!8},
 	keepspaces=true,                                  
-  showspaces=false,                
-  showstringspaces=false,
-  showtabs=false,                  
-  tabsize=2
+  	showspaces=false,                
+  	showstringspaces=false,
+  	showtabs=false,                  
+  	tabsize=2
 }
+
+..snip..
+
+\begin{lstlisting}
+for x in customlist:
+	print x
+\end{lstlisting}
+
 ```
 
