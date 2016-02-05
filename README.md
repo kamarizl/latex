@@ -58,4 +58,15 @@ for x in customlist:
 \end{lstlisting}
 
 ```
+Alternate row colors in tables. Handy tool [Excel2latex](http://www.ctan.org/tex-archive/support/excel2latex/)
+```
+% preamble
+\usepackage[table]{xcolor}
+...snip..
+
+\rowcolors{1}{white}{lightgray}
+\begin{table}[htbp]
+  \centering
+  ...snip..
+```
 
