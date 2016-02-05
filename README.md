@@ -69,4 +69,15 @@ Alternate row colors in tables. Handy tool [Excel2latex](http://www.ctan.org/tex
   \centering
   ...snip..
 ```
+Nice description lists
+```
+\usepackage{enumitem}
+\usepackage{layouts}
+% \setlength{\parindent}{0pt}
 
+\begin{description}[labelwidth=2cm, leftmargin=!]
+ \item[A] lorem ipsum dolor sit amet, consectetur adipisicing elit,
+ \item[B] lorem ipsum dolor sit amet, consectetur adipisicing elit,
+\end{description}
+
+```
