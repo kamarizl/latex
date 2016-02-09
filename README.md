@@ -32,6 +32,7 @@ Simple and clean title page
     \normalsize \ \thedate \\
     \normalsize \ v-1.0 \\ % version
 }
+\thispagestyle{mainpage}
 ...snip...
 
 ```
